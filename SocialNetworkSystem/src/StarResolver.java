@@ -7,6 +7,16 @@ public class StarResolver {
             return false;
         }
 
+        int fans = countFans(network, person);
+
+        if (fans >= 100_000) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private int countFans(Network network, Person person) {
         int fans = 0;
 
         for (Person other: network.getPersons()) {
@@ -15,10 +25,6 @@ public class StarResolver {
             }
         }
 
-        if (fans >= 100_000) {
-            return true;
-        }
-
-        return false;
+        return fans;
     }
 }
