@@ -6,10 +6,12 @@ import java.util.HashSet;
 public class Network {
     private HashSet<Person> persons;
     private KnowsResolver knowsResolver;
+    private StarResolver starResolver;
 
     public Network() {
-        knowsResolver = new KnowsResolver();
         persons = new HashSet<>();
+        knowsResolver = new KnowsResolver();
+        starResolver = new StarResolver();
     }
 
     public HashSet<Person> getPersons() {
