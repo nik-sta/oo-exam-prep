@@ -30,7 +30,7 @@ public class Person {
 
     @Override
     public String toString() {
-        String value = getName() + " kennt: ";
+        String value = getName() + " knows: ";
 
         for (Person person : knownPersons) {
             value += "{" + person.getName() + "} ";
