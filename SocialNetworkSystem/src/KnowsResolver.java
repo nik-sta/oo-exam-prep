@@ -20,7 +20,7 @@ public class KnowsResolver {
         }
 
         visited.add(one);
-        for (Person other : two.getKnownPersons()) {
+        for (Person other : one.getKnownPersons()) {
             if (isLinked(other, two, visited)) {
                 return true;
             }
